@@ -30,7 +30,7 @@ stages:
             inputs:
               command: buildAndPush
               containerRegistry: AzureCR
-              repository: leriksen/hreporter
+              repository: leriksen/min-js-webserver
               addBaseImageData: false
               tags: |
                 $(Build.BuildId)
