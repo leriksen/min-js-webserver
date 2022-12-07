@@ -3,8 +3,9 @@ const http = require('http');
 const util = require('util');
 
 const server = http.createServer((req, res) => {
-  console.log("received request");
+  console.log("received request for " + req.url);
 
+  res.setHeader('Content-Type', 'application/json');
   res.write(util.format('%j', req.headers))
   res.end();
 });
